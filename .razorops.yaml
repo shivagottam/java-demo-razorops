@@ -10,6 +10,7 @@ tasks:
         
     - run: mvn clean test
     - run: ls -a 
+    - run: ls target
     - run: scp -r target/my-app-1.0-SNAPSHOT.jar ubuntu@15.206.125.36:/opt/apache-tomcat-8.5.81/webapps
     - reports/junit: 
       - target/surefire-reports/TEST-*.xml
